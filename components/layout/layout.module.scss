@@ -1,0 +1,82 @@
+//c => cross
+$size: 17px;
+$oth: 3px;
+@mixin line {
+  position: absolute;
+  content: "";
+  background-color: theme("colors.primary.500");
+}
+.menu {
+
+}
+
+.c {
+  &_t_l {
+    position: relative;
+    &::after {
+      @include line;
+      height: $size;
+      width: $oth;
+      bottom: -$size/2;
+      right: -$oth/2;
+    }
+    &::before {
+      @include line;
+      width: $size;
+      height: $oth;
+      right: -$size/2;
+      bottom: -$oth/2;
+    }
+  }
+  &_t_r {
+    position: relative;
+    &::after {
+      @include line;
+      height: $size;
+      width: $oth;
+      bottom: -$size/2;
+      left: -($oth + 1)/2;
+    }
+    &::before {
+      @include line;
+      width: $size;
+      height: $oth;
+      left: -($size + 1)/2;
+      bottom: -$oth/2;
+    }
+  }
+  &_b_l {
+    position: relative;
+    &::after {
+      @include line;
+      height: $size;
+      width: $oth;
+      top: -$size/2;
+      right: -$oth/2;
+    }
+    &::before {
+      @include line;
+      width: $size;
+      height: $oth;
+      right: -$size/2;
+      top: -$oth/2;
+    }
+  }
+  &_b_r {
+    position: relative;
+    &::after {
+      @include line;
+      height: $size;
+      width: $oth;
+      top: -$size/2;
+      left: -($oth + 1)/2;
+    }
+    &::before {
+      @include line;
+      width: $size;
+      height: $oth;
+      left: -($size + 1)/2;
+      top: -$oth/2;
+    }
+  }
+}
