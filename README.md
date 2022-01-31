@@ -1,5 +1,1 @@
-autoprefixer
-postcss
-tailwindcss
-
-yarn add  --dev autoprefixer postcss tailwindcss
+Hi i'm me, nice to meetyou
