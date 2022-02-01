@@ -10,7 +10,7 @@ import { useRouter } from "next/router";
 import classes from "./layout.module.scss";
 
 const name = 'Yoshio Tsuda'
-export const siteTitle = 'Next.js Sample Website'
+export const siteTitle = 'Tsuda Space'
 
 type LayoutPropType = {
   children: React.ReactNode;
@@ -25,7 +25,7 @@ const gridColumnCenter = "col-start-2 col-span-4 boder border-x border-slate-300
 const gridColumnRight = "col-start-6 ";
 const placeInCenter = "flex items-center justify-center";
 
-const fullScreen = "min-h-screen bg-slate-100";
+const fullScreen = "min-h-screen bg-slate-100 bg-[url(/images/background.svg)]";
 const fullWidth = "w-full borde border-slate-300";
 
 const menuAnchor = `
@@ -54,6 +54,7 @@ export default function Layout({ children, contextRight, contextLeft }: LayoutPr
           name="description"
           content="Learn how to build a personal website using Next.js"
         />
+        <title >{`<Tsuda Space />`}</title>
         <meta
           property="og:image"
           content={`https://og-image.vercel.app/${encodeURI(
